@@ -1,0 +1,91 @@
+  
+
+// Card Title h2 intro 
+
+.services{
+  &__headtitle{
+    text-align: center;
+        color:$black;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        // border: 1px solid red;
+           @include desde($small){
+                  width: 50%;
+                  margin-top: 2em;
+              }
+        &__title{
+         font-size: 1.5rem;
+     letter-spacing: 3px;
+     &:after{
+      display: block;
+      height: 2px;
+      background-color:$bnt_hover;
+      content: " ";
+      width: 50px;
+      margin: 0 auto;
+      margin-top: 20px;
+      }
+        }
+    } 
+   &__description{
+        text-align: center;
+        color:$black;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      &__intro{
+         font-size: 1rem;
+      }
+   }
+}
+
+// Card Title h2 intro P and Cards
+.services{
+   padding:20px 0 40px 0;
+   &__cards{
+         @include desde($medium){
+           display: flex;
+           justify-content: space-between;
+           flex-wrap: wrap;  
+            }
+             &__items{
+                  text-align: center;
+                  margin-bottom: 2em;
+                  @include desde($medium){
+                  flex: 1 0 0;
+                  max-width: 32%;
+                  // width: calc(33% - 1em);
+                   }
+                  &__title_items{
+
+                    }
+                  &__description_items{
+              
+                    }
+                  &__description_items{
+              
+                    }
+                  &__button{
+                   font-weight:600;
+                   text-transform: uppercase;
+                    padding: 6px 23px;
+                    border:2px solid #95e1d4;
+                    color: $black;
+                     &:hover{
+                        color: #95e1d4;;
+                      }
+                   }      
+          } 
+          // end items      
+    }
+}
+
+// Sponsors
+.sponsors{
+   text-align: center;
+   padding:0 10px 40px 10px;
+  &__title{
+    font-size:1.2em;
+  }
+}

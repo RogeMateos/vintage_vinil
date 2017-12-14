@@ -1,0 +1,98 @@
+// Navigation
+       // Navigation
+       .main-header{
+         background:$black;
+         padding-bottom: 12px;
+          @include desde($small){
+             display: flex;
+             justify-content: space-between;
+             padding-bottom: 0;
+            }
+           a {
+             font-size: 1rem;
+             text-transform: uppercase;
+             font-weight: 600;
+              &:hover {
+                color:$bnt_hover;
+               }
+           }
+         .main-menu{
+           text-align: center;
+           padding-left: 0;
+            @include desde($small){
+              display: flex;
+              justify-content: space-between;
+              width: 600px;
+              padding-left: 30px;
+             }
+         }
+         &__button{
+            margin: 0 auto;
+            width: 173px;
+            background-color:$bnt_hover;
+            padding:4px
+            ;
+           &:hover{
+                  background: darken($bnt_hover,5);
+                 }
+           @include desde($small){
+             display: flex;
+             padding:10px 5px 10px 5px;
+             margin: 0;
+             }
+           &__registration{
+               padding:3px 5px 3px 5px;
+               @include desde($small){
+                 align-self: center;
+                 }
+           }
+        }
+        .button--color:hover{
+          color: #fff;
+        }
+    }
+// Background basis
+.background{
+    background: url(../img/background_vinyl.jpg) center center  no-repeat;
+    background-size: cover;
+    background-color:#464646;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    :after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#514077, #FFAD01);
+    opacity: .3;
+    z-index: -1;
+    }
+    &__container{
+      width: 80%;
+         @include desde($small){
+                  width: 50%;
+              }
+      &__logo{
+         text-align: center;
+         padding-top:1em;
+         }
+       &__logo img{
+           width: 80%;
+         }
+
+      }
+         &__title{
+        text-align: center;
+        color:$white  ;
+        font-size: 2rem;
+               @include desde($small){
+                  font-size: 4rem;
+                }
+         }
+         // end tittle
+     }
+    // end background

@@ -1,0 +1,59 @@
+
+// footer
+.footer{
+  background-color: #3a3a3a;
+   color: #fff;
+   padding: 1px 0 10px 0;
+  *:last-child {
+    margin-bottom: 0;
+  }
+  &__container{
+      @include desde($small){
+           display: flex;
+           justify-content: space-between;
+           flex-wrap: wrap; 
+
+             }
+    &__item{
+        @include desde($small){
+            flex: 1 0 0;
+            max-width: 32%;
+          } //end mediquery
+      padding-left: 10px; // aligning main items
+      &__title{
+        font-size: 1em;
+           &:after {
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: #fff;
+            content: " ";
+            margin-top: 10px;
+           }
+       }
+      &__align{
+        padding-left: 0;// aligning main items ul
+     }
+      // styles for times and months timatable
+        &--timetable { 
+             @include desde($small){
+              display: flex;
+              justify-content: space-between;
+              flex-wrap: wrap; 
+               }
+             &__monthstime_item{
+               padding-left:0;// aligning main items ul montha nd time
+            } 
+
+          }
+
+    }  // ends item
+  }
+  &__bottom{
+    text-align: center;
+    &__title{
+      color: #808080;
+    }
+  }
+}
+
